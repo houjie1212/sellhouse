@@ -33,3 +33,8 @@ spring:
       filters: stat,wall,log4j
       use-global-data-source-stat: true
       connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+mybatis:
+  type-aliases-package: com.sellhourse.entity
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  configuration:
+    cache-enabled: false

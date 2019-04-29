@@ -1,4 +1,4 @@
-package com.sellhourse.config.datasource;
+package com.sellhouse.config.datasource;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

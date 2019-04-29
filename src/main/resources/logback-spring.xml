@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property name="log.pattern" value="%date [%level] [%thread] %logger{80} [%file :%n
+                %line] %msg%n" />
+    <property name="log.pattern.color" value="%date %highlight([%level]) [%thread] %cyan(%logger{80}) [%file :%n
+                %line] %green(%msg%n)" />
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <Target>System.out</Target>
+        <encoder>
+            <pattern>${log.pattern.color}</pattern>
+        </encoder>
+    </appender>
+    <appender name="FILE"
+        class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/app.log</file>
+        <encoder>
+            <pattern>${log.pattern}</pattern>
+        </encoder>
+        <rollingPolicy
+            class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logs/app.%d{yyyy-MM-dd}.log
+            </fileNamePattern>
+            <!-- 保留 30天数据，默认无限 -->
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>3GB</totalSizeCap>
+        </rollingPolicy>
+    </appender>
+    <appender name="TRACE"
+        class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/trace.log</file>
+        <encoder>
+            <pattern>%date %msg%n</pattern>
+        </encoder>
+        <rollingPolicy
+            class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logs/trace.%d{yyyy-MM-dd}.log
+            </fileNamePattern>
+            <!-- 保留 30天数据，默认无限 -->
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>3GB</totalSizeCap>
+        </rollingPolicy>
+    </appender>
+    
+    <!-- 彩色日志依赖的渲染类 -->
+    <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter" />
+    <conversionRule conversionWord="wex" converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter" />
+    <conversionRule conversionWord="wEx" converterClass="org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter" />
+    <!-- Console 输出设置 -->
+    <appender name="STDOUT_COLOR" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${log.pattern.color}</pattern>
+        </encoder>
+    </appender>
+    
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE" />
+    </root>
+    <logger name="org.springframework" level="WARN" />
+    <logger name="org.springframework.cloud" level="INFO" />
+    <springProfile name="local,test,localpre">
+        <logger name="com.sellhouse" level="DEBUG" />
+        <logger name="com.mysql" level="DEBUG" />
+    </springProfile>
+    <springProfile name="pre,prod">
+        <logger name="com.sellhouse" level="INFO" />
+    </springProfile>
+</configuration>
