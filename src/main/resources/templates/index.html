@@ -1,6 +1,48 @@
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <script src="webjars/jquery/3.4.0/jquery.min.js"></script>
+  <script src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="webjars/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/static/css/fullpage.min.css" />
+  <link rel="stylesheet" href="/static/css/index.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>index</title>
+</head>
 <body>
-hello
+  <!-- headerbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand mb-0 h1">购房热线 00000000</a>
+    <div class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#">首页 <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#">户型详介</a>
+        <a class="nav-item nav-link" href="#">实景照片</a>
+        <a class="nav-item nav-link" href="#">视频讲解</a>
+        <a class="nav-item nav-link" href="#">华银城</a>
+        <a class="nav-item nav-link" href="#">热销靓盘</a>
+        <a class="nav-item nav-link" href="#">关于我们</a>
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">已有<span id="reservenum">xxxx</span>人预约看房</a>
+      </div>
+    </div>
+  </nav>
+
+  <div id="fullpage">
+    <div class="section active" id="section0"><h1>fullPage.js</h1></div>
+    <div class="section" id="section1">
+      <div class="slide "><h1>Simple Demo</h1></div>
+      <div class="slide active"><h1>Only text</h1></div>
+      <div class="slide"><h1>And text</h1></div>
+      <div class="slide"><h1>And more text</h1></div>
+    </div>
+    <div class="section" id="section2"><h1>No wraps, no extra markup</h1></div>
+    <div class="section" id="section3"><h1>Just the simplest demo ever</h1></div>
+  </div>
+  
+  <script src="/static/js/fullpage.min.js"></script>
+  <script src="/static/js/fullpage.extensions.min.js"></script>
+  <script type="text/javascript" src="/static/js/index.js"></script>
 </body>
 </html>
