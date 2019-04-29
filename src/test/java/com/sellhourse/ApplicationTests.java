@@ -1,4 +1,4 @@
-package com.houjie.hellosb;
+package com.sellhourse;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

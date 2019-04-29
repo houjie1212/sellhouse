@@ -1,4 +1,4 @@
-package com.houjie.hellosb;
+package com.sellhourse;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
