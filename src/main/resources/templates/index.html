@@ -14,7 +14,7 @@
 <body>
   <!-- headerbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <a class="navbar-brand mb-0 h1">购房热线 400-1234-567</a>
+    <a class="navbar-brand mb-0 h1"><strong>购房热线 400-1234-567</strong></a>
     <div class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <div class="navbar-nav">
         <a class="nav-item nav-link active" href="#">首页 <span class="sr-only">(current)</span></a>
@@ -24,21 +24,32 @@
         <a class="nav-item nav-link" href="#">华银城</a>
         <a class="nav-item nav-link" href="#">热销靓盘</a>
         <a class="nav-item nav-link" href="#">关于我们</a>
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">已有<span id="reservenum">xxxx</span>人预约看房</a>
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">已有<span id="reservenum">9999</span>人预约看房</a>
       </div>
     </div>
   </nav>
 
   <div id="fullpage">
-    <div class="section active" id="section0"><h1>fullPage.js</h1></div>
+    <div class="section active" id="section0">
+      <table>
+        <tr>
+          <td type="text" width="20" height="5"></td>
+        </tr>
+      </table>
+    </div>
     <div class="section" id="section1">
+      <div>
+        <p style="text-align:center;font-size:48px;"><strong>楼盘优势</strong></p>
+        <p style="text-align:center;font-size:20px;">优势汇集打造未来生态宜居家园</p>
+      </div>
+    </div>
+    <div class="section" id="section2"><h1>No wraps, no extra markup</h1></div>
+    <div class="section" id="section3"><h1>Just the simplest demo ever</h1>
       <div class="slide "><h1>Simple Demo</h1></div>
       <div class="slide active"><h1>Only text</h1></div>
       <div class="slide"><h1>And text</h1></div>
       <div class="slide"><h1>And more text</h1></div>
     </div>
-    <div class="section" id="section2"><h1>No wraps, no extra markup</h1></div>
-    <div class="section" id="section3"><h1>Just the simplest demo ever</h1></div>
   </div>
   
   <script src="/static/js/fullpage.min.js"></script>
