@@ -1,5 +1,10 @@
 #section0 {
-  background-image: url("../image/photo-1483936430527-052964fdfb40.jpg");
+  background-image: url("../image/photo-1.jpg");
   background-repeat: no-repeat;
-  background-height:100%;
+  background-size:100% 100%;
+}
+#section3 {
+  background-image: url("../image/4-1.png");
+  background-repeat: no-repeat;
+  background-size:100% 100%;
 }
