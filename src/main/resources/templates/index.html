@@ -29,7 +29,7 @@
         <a class="nav-item nav-link" href="#">华银城</a>
         <a class="nav-item nav-link" href="#">热销靓盘</a>
         <a class="nav-item nav-link" href="#">关于我们</a>
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">已有<span id="reservenum">9999</span>人预约看房</a>
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">已有<span id="reservenum">0</span>人预约看房</a>
       </div>
     </div>
   </nav>
@@ -41,9 +41,15 @@
         
         <form>
         <ul class="text-center">
-          <li style="list-style-type:none;padding-bottom:10px;"><input type="text;" placeholder="姓名" style="height:40px; border-radius:6px; padding-left:8px;" size="50"></li>
-          <li style="list-style-type:none;padding-top:10px;"><input type="text;" placeholder="电话" style="height:40px; border-radius:6px; padding-left:8px;" size="50"></li>
-          <li style="list-style-type:none;padding-top:20px;"><input type="button" value="预约看房，到访有礼" style="background:none; height:50px;border-radius:18px; border:2px solid #ffffff;font-size:26px; color:white;padding-left:10px;padding-right:10px;"></li>
+          <li style="list-style-type:none;padding-bottom:10px;">
+            <input type="text" id="form-username" placeholder="姓名" style="height:40px; border-radius:6px; padding-left:8px;" size="50">
+          </li>
+          <li style="list-style-type:none;padding-top:10px;">
+            <input type="text" id="form-mobile" placeholder="电话" style="height:40px; border-radius:6px; padding-left:8px;" size="50">
+          </li>
+          <li style="list-style-type:none;padding-top:20px;">
+            <input type="button" id="btn-submit" value="预约看房，到访有礼" style="background:none; height:50px;border-radius:18px; border:2px solid #ffffff;font-size:26px; color:white;padding-left:10px;padding-right:10px;">
+          </li>
         </ul>
         </form>
         
