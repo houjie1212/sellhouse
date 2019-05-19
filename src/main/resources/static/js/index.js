@@ -26,7 +26,7 @@ $(function(){
             },
             dataType: 'text',
             success: function(data, textStatus, jqXHR) {
-                alert('登记成功');
+                alert('登记成功！稍后会有工作人员对您回访，请耐心等待...');
                 $("#reservenum").text(parseInt($("#reservenum").text()) + 1);
             },
             error: function(err) {
