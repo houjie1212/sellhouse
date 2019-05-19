@@ -6,11 +6,11 @@ PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.sellhouse.mapper.ReserveMapper">
 
     <select id="selectCount" resultType="int">
-        SELECT COUNT(*) from user
+        SELECT COUNT(*) from user_b
     </select>
     
-    <select id="insert" parameterType="com.sellhouse.entity.ReserveEntity">
-        INSERT INTO user (id, username, mobile, create_time)
+    <insert id="insert" parameterType="com.sellhouse.entity.ReserveEntity">
+        INSERT INTO user_b (id, username, mobile, create_time)
         VALUES (#{id}, #{username}, #{mobile}, #{createTime})
-    </select>
+    </insert>
 </mapper>
